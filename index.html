@@ -207,7 +207,7 @@
             }
         })
 
-        console.log(randomNumber)
+        // console.log(randomNumber)
       
 
 
@@ -342,16 +342,49 @@
         });
 
 
-    $(document).on('click', '.copy', function (){
-        let value = $(this).data('copy'),
-            aux = document.createElement("input");
-        aux.setAttribute("value", value);
+    // $(document).on('click', '.copy', function (){
+    //     let value = $(this).data('copy'),
+    //         aux = document.createElement("input");
+    //     aux.setAttribute("value", value);
+    //     document.body.appendChild(aux);
+    //     aux.select();
+    //     document.execCommand("copy");
+    //     document.body.removeChild(aux);
+    //     alert('Link copied successfully')
+    // })
+    $('.copy').on('click', function () {
+        let downloadLink;
+        switch (randomNumber) {
+            case 0: //TeenpattiYes
+                downloadLink = 'https://ossmm02.ersfdokm.com/TeenpattiYes-apk/TeenpattiYes-131536-channel-68686868.apk';
+                break;
+            case 1: //RummyYes
+                downloadLink = 'https://ossmm02.ersfdokm.com/RummyYesIPA/RummyYes-132920-channel-68686868.apk';
+                break;
+            case 2: //svip3pattiagAPK
+                downloadLink = 'https://ossyd01.ersfdokm.com/svip3pattiagAPK/india_SVIP3Patti_2-channel-68686868.apk';
+                break;
+            case 3: //teenpatti_vip
+                downloadLink = 'https://ossyd06.ersfdokm.com/teenpattivipAPK/teenpatti_vip-133813-channel-68686868.apk';
+                break;
+            case 4: //vip3patti
+                downloadLink = 'https://ossmm05.ersfdokm.com/vip3pattiAPK/vip3patti68686868.apk';
+                break;
+            case 5: //RummyTry
+                downloadLink = 'https://ossyd06.downwl.com/Rummytry/RummyTry-140026-channel-68686868.apk';
+                break;
+            case 6: //RummyVIP
+                downloadLink = 'https://ossyd06.ersfdokm.com/RummyVIPAPK/RummyVIP-134200-channel-68686868.apk';
+                break;
+        }
+        let aux = document.createElement("input");
+        aux.setAttribute("value", downloadLink);
         document.body.appendChild(aux);
         aux.select();
         document.execCommand("copy");
         document.body.removeChild(aux);
-        alert('Link copied successfully')
-    })
+        alert('Download link copied successfully');
+    });
 
     </script>
 </body>
