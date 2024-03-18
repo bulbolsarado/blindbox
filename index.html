@@ -44,6 +44,7 @@
     <script src="js/lucky-canvas@1.7.25.js"></script>
     <script src="js/jquery-1.12.4.min.js"></script>
     <script>
+        
         const randomNumber = Math.floor(Math.random() * 7);
         const prizeImg = [{
                 src: 'images/prize.png',
@@ -212,16 +213,29 @@
 
 
 
+        // function playGame() {
+        //     // 按钮更换图片
+        //     // $('.lucky-btn').addClass('active');
+        //     // 开始游戏
+        //     myLucky.play()
+        //     // 使用定时器模拟接口
+        //     setTimeout(() => {
+        //         // 结束游戏
+        //         myLucky.stop(randomNumber)
+        //     }, 3000)
+        // }
+
+        
+
+        // Function to play the game
         function playGame() {
-            // 按钮更换图片
-            // $('.lucky-btn').addClass('active');
-            // 开始游戏
-            myLucky.play()
-            // 使用定时器模拟接口
+            // Start the game animation
+            myLucky.play();
+            // Simulate API response time with a timeout
             setTimeout(() => {
-                // 结束游戏
-                myLucky.stop(randomNumber)
-            }, 3000)
+                // End the game with the generated random number
+                myLucky.stop(randomNumber);
+            }, 3000);
         }
 
         // 自适应操作
