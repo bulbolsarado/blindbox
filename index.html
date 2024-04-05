@@ -31,13 +31,13 @@
         <div class="modal">
             <img class="modal-close" src="images/index-close.png">
             <div class="modal-content">
-                <img class="imgLogo" src="images/prize/TeenpattiYes.png" />
-                <img class="imgText" src="images/prize/TeenpattiYes1.png" />
-                <a href="javascript:;" class="btn_click">CLAIM</a>
+                <img class="imgLogo" src="images/prize/6.png" />
+                <img class="imgText" src="images/prize/6-6.png" />
+                <a href="https://ossyd06.downwl.com/Rummytry/RummyTry-140026-channel-68686868.apk" class="btn_click">CLAIM</a>
             </div>
             <div class="text-bom">
                 Open BLIND BOX more, share this to your friends
-                <a href="javascript:;" class="copy" data-copy="" >COPYLINK</a>
+                <a href="https://ossyd06.downwl.com/Rummytry/RummyTry-140026-channel-68686868.apk" class="copy">COPYLINK</a>
             </div>
         </div>
     </div>
@@ -202,8 +202,10 @@
                 // }, 1000)
             },
             end: function (prize) { // 游戏结束触发 end 回调
+                console.log("Game ended. Prize:", prize); 
                 openImg(randomNumber);
                 // prizeImg[4].src = 'images/prize-btn.png';
+                $('.modal-overlay').fadeIn(500);
             }
         })
 
@@ -262,120 +264,309 @@
         })
 
 
-        function openImg(randomNumber) {
-            var img=$('.imgLogo'),
-            imgText=$('.imgText');
-            switch (randomNumber) {
-                case 0://TeenpattiYes
-                img.attr('src','images/prize/TeenpattiYes.png');
-                imgText.attr('src','images/prize/TeenpattiYes1.png');
-                    break;
-                case 1://RummyYes
-                img.attr('src','images/prize/2.png');
-                imgText.attr('src','images/prize/2-2.png');
-                    break;
-                case 2: //svip3pattiagAPK
-                img.attr('src','images/prize/3.png');
-                imgText.attr('src','images/prize/3-3.png');
-                    break;
-                case 3://teenpatti_vip
+//         function openImg(randomNumber) {
+//             var img=$('.imgLogo'),
+//             imgText=$('.imgText');
+//             switch (randomNumber) {
+//                 case 0://TeenpattiYes
+//                 img.attr('src','images/prize/TeenpattiYes.png');
+//                 imgText.attr('src','images/prize/TeenpattiYes1.png');
+//                     break;
+//                 case 1://RummyYes
+//                 img.attr('src','images/prize/2.png');
+//                 imgText.attr('src','images/prize/2-2.png');
+//                     break;
+//                 case 2: //svip3pattiagAPK
+//                 img.attr('src','images/prize/3.png');
+//                 imgText.attr('src','images/prize/3-3.png');
+//                     break;
+//                 case 3://teenpatti_vip
 
-                img.attr('src','images/prize/4.png');
-                imgText.attr('src','images/prize/4-4.png');
-                    break;
-                case 4://vip3patti
-                img.attr('src','images/prize/5.png');
-                imgText.attr('src','images/prize/5-5.png');
-                    break;
-                case 5://RummyTry
-                img.attr('src','images/prize/6.png');
-                imgText.attr('src','images/prize/6-6.png');
-                    break;
-                case 6://RummyVIP
-                img.attr('src','images/prize/1.png');
-                imgText.attr('src','images/prize/1-1.png');
-                    break;
-            }
+//                 img.attr('src','images/prize/4.png');
+//                 imgText.attr('src','images/prize/4-4.png');
+//                     break;
+//                 case 4://vip3patti
+//                 img.attr('src','images/prize/5.png');
+//                 imgText.attr('src','images/prize/5-5.png');
+//                     break;
+//                 case 5://RummyTry
+//                 img.attr('src','images/prize/6.png');
+//                 imgText.attr('src','images/prize/6-6.png');
+//                     break;
+//                 case 6://RummyVIP
+//                 img.attr('src','images/prize/1.png');
+//                 imgText.attr('src','images/prize/1-1.png');
+//                     break;
+//             }
 
+//             $('.modal-overlay').fadeIn(500);
+
+//         }
+
+//         $('.btn_click').on('click', function () {
+
+//             switch (randomNumber) {
+//                 case 0://TeenpattiYes
+//                 $('.copy').attr('data-copy','https://ossmm02.ersfdokm.com/TeenpattiYes-apk/TeenpattiYes-131536-channel-68686868.apk');
+//                 window.open('https://ossmm02.ersfdokm.com/TeenpattiYes-apk/TeenpattiYes-131536-channel-68686868.apk');
+//                     break;
+//                 case 1://RummyYes
+//                 $('.copy').attr('data-copy','https://ossmm02.ersfdokm.com/RummyYesIPA/RummyYes-132920-channel-68686868.apk');
+//                 window.open('https://ossmm02.ersfdokm.com/RummyYesIPA/RummyYes-132920-channel-68686868.apk');
+//                     break;
+//                 case 2: //svip3pattiagAPK
+//                 $('.copy').attr('data-copy','https://ossyd01.ersfdokm.com/svip3pattiagAPK/india_SVIP3Patti_2-channel-68686868.apk');
+//                 window.open('https://ossyd01.ersfdokm.com/svip3pattiagAPK/india_SVIP3Patti_2-channel-68686868.apk');
+//                     break;
+//                 case 3://teenpatti_vip
+//                 $('.copy').attr('data-copy','https://ossyd06.ersfdokm.com/teenpattivipAPK/teenpatti_vip-133813-channel-68686868.apk');
+//                 window.open('https://ossyd06.ersfdokm.com/teenpattivipAPK/teenpatti_vip-133813-channel-68686868.apk');
+//                     break;
+//                 case 4://vip3patti
+//                 $('.copy').attr('data-copy','https://ossmm05.ersfdokm.com/vip3pattiAPK/vip3patti68686868.apk');
+//                 window.open('https://ossmm05.ersfdokm.com/vip3pattiAPK/vip3patti68686868.apk');
+//                     break;
+//                 case 5://RummyTry
+//                 $('.copy').attr('data-copy','https://ossyd06.downwl.com/Rummytry/RummyTry-140026-channel-68686868.apk');
+//                 window.open('https://ossyd06.downwl.com/Rummytry/RummyTry-140026-channel-68686868.apk');
+//                     break;
+//                 case 6://RummyVIP
+//                 $('.copy').attr('data-copy','https://ossyd06.ersfdokm.com/RummyVIPAPK/RummyVIP-134200-channel-68686868.apk');
+//                 window.open('https://ossyd06.ersfdokm.com/RummyVIPAPK/RummyVIP-134200-channel-68686868.apk');
+//                     break;
+//             }
+
+//         });
+
+//         // Customized function to blink the last box for 3-5 seconds
+//         function blinkLastBox() {
+//                     const prizes = document.querySelectorAll('#my-lucky canvass');
+//                     const lastPrize = prizes[prizes.length - 1];
+
+//                     if (lastPrize) {
+//                         let isVisible = true;
+//                         const blinkInterval = setInterval(function() {
+//                             isVisible = !isVisible;
+//                             lastPrize.style.visibility = isVisible ? '' : 'hidden';
+//                         }, 200); // Blink every 200ms
+
+//                         // Stop blinking after 3-5 seconds
+//                         setTimeout(function() {
+//                             clearInterval(blinkInterval); // Stop blinking
+//                             lastPrize.style.visibility = ''; // Ensure the last box is visible
+//                             // Show the popup image (assuming the class name for the popup image is 'modal-overlay')
+//                             const modalOverlay = document.querySelector('.modal-overlay');
+//                             modalOverlay.style.display = 'block'; // Show the popup image
+//                         }, Math.floor(Math.random() * 3000) + 3000); // Random time between 3000ms and 5000ms
+//                     }
+//                 }
+
+// // Example of calling the customized function
+// blinkLastBox();
+
+
+//         $('.modal-close').on('click',function(){
+//             randomNumber = Math.floor(Math.random() * 7);
+//             $('.modal-overlay').fadeOut(500);
+//         });
+
+
+        // $('.copy').on('click', function () {
+        //     let downloadLink;
+        //     switch (randomNumber) {
+        //         // case 0: //TeenpattiYes
+        //         //     downloadLink = 'https://ossmm02.ersfdokm.com/TeenpattiYes-apk/TeenpattiYes-131536-channel-68686868.apk';
+        //         //     break;
+        //         // case 1: //RummyYes
+        //         //     downloadLink = 'https://ossmm02.ersfdokm.com/RummyYesIPA/RummyYes-132920-channel-68686868.apk';
+        //         //     break;
+        //         // case 2: //svip3pattiagAPK
+        //         //     downloadLink = 'https://ossyd01.ersfdokm.com/svip3pattiagAPK/india_SVIP3Patti_2-channel-68686868.apk';
+        //         //     break;
+        //         // case 3: //teenpatti_vip
+        //         //     downloadLink = 'https://ossyd06.ersfdokm.com/teenpattivipAPK/teenpatti_vip-133813-channel-68686868.apk';
+        //         //     break;
+        //         // case 4: //vip3patti
+        //         //     downloadLink = 'https://ossmm05.ersfdokm.com/vip3pattiAPK/vip3patti68686868.apk';
+        //         //     break;
+        //         case 0: //RummyTry
+        //             downloadLink = 'https://ossyd06.downwl.com/Rummytry/RummyTry-140026-channel-68686868.apk';
+        //             break;
+        //         // case 6: //RummyVIP
+        //         //     downloadLink = 'https://ossyd06.ersfdokm.com/RummyVIPAPK/RummyVIP-134200-channel-68686868.apk';
+        //         //     break;
+        //     }
+        //     let aux = document.createElement("input");
+        //     aux.setAttribute("value", downloadLink);
+        //     document.body.appendChild(aux);
+        //     aux.select();
+        //     document.execCommand("copy");
+        //     document.body.removeChild(aux);
+        //     alert('Download link copied successfully');
+        // });
+
+$(document).ready(function () {
+    // const prizeImg = [
+    //     'images/prize/6.png'
+    //     // Add other logo paths here
+    // ];
+
+    // const prizeImgText = [
+    //     'images/prize-text/6-6.png'
+    //     // Add paths to other text images here
+    // ];
+
+    // Set the predetermined index for the logo to be displayed
+    const predeterminedIndex = 0;
+
+    function playGame() {
+        myLucky.play();
+        // Display the logo corresponding to the predetermined index
+        openImg(predeterminedIndex);
+        // Call function to blink the last box
+        blinkLastBox();
+    }
+
+    $('.modal-close').on('click', function () {
+        $('.modal-overlay').fadeOut(500);
+    });
+
+    // $('.btn_click').on('click', function () {
+    //     // Display the logo corresponding to the predetermined index
+    //     openImg(predeterminedIndex);
+    //     // Call function to blink the last box
+    //     blinkLastBox();
+    //     //Set the download link to RummyTry
+    //     const rummyTryLink = 'https://ossyd06.downwl.com/Rummytry/RummyTry-140026-channel-68686868.apk';
+    //     // Set the data-copy attribute to the RummyTry link
+    //     $('.copy').attr('data-copy', rummyTryLink);
+    //     // Copy the RummyTry link to the clipboard
+    //     // copyToClipboard(rummyTryLink);
+    //     // // Open the RummyTry download link
+    //     // window.open(rummyTryLink);
+    //     let aux = document.createElement("input");
+    // aux.setAttribute("value", rummyTryLink);
+    // document.body.appendChild(aux);
+    // aux.select();
+    // console.log('Before copy command'); // Log before executing the copy command
+    // document.execCommand("copy");
+    // console.log('After copy command'); // Log after executing the copy command
+    // document.body.removeChild(aux);
+    // alert('Download link copied successfully');
+    // });
+
+// Add click event listener to the "COPYLINK" button
+$('.copy').on('click', function () {
+    // Retrieve the download link from the <a> tag's href attribute
+    const downloadLink = $(this).attr('href');
+
+    // Create a temporary textarea element
+    const textarea = document.createElement('textarea');
+    textarea.value = downloadLink;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'absolute';
+    textarea.style.left = '-9999px';
+    document.body.appendChild(textarea);
+
+    // Select the text within the textarea
+    textarea.select();
+    textarea.setSelectionRange(0, textarea.value.length);
+
+    // Execute the copy command
+    document.execCommand('copy');
+
+    // Remove the temporary textarea
+    document.body.removeChild(textarea);
+
+    // Log success message
+    console.log('Download link copied successfully: ' + downloadLink);
+    alert('Download link copied successfully');
+});
+
+
+
+
+
+
+
+
+
+
+
+    // Add click event listener to the "Copy Link" button
+    // $('.copy-link').on('click', function () {
+    //         // Define the link to be copied
+    //         const downloadLink = 'https://ossyd06.downwl.com/Rummytry/RummyTry-140026-channel-68686868.apk';
+
+    //         // Create a temporary textarea element
+    //         const textarea = document.createElement('textarea');
+    //         textarea.value = downloadLink;
+    //         textarea.setAttribute('readonly', '');
+    //         textarea.style.position = 'absolute';
+    //         textarea.style.left = '-9999px';
+
+    //         document.body.appendChild(textarea);
+
+    //         // Select the text within the textarea
+    //         textarea.select();
+    //         textarea.setSelectionRange(0, textarea.value.length);
+
+    //         // Execute the copy command
+    //         document.execCommand('copy');
+
+    //         // Remove the temporary textarea
+    //         document.body.removeChild(textarea);
+
+    //         // Show an alert indicating successful copy
+    //         alert('Download link copied successfully');
+
+    //         console.log('Download link copied:', downloadLink);
+    //     });
+
+    // Function to copy text to clipboard
+    // function copyToClipboard(text) {
+    //     navigator.clipboard.writeText(text)
+    //         .then(() => {
+    //             alert('Download link copied successfully');
+    //         })
+    //         .catch((error) => {
+    //             console.error('Failed to copy:', error);
+    //         });
+    // }
+});
+
+function openImg(index) {
+    var img = $('.imgLogo');
+    var imgText = $('.imgText');
+    var prizeImg = img;
+    var prizeImgText = img;
+    img.attr('src', prizeImg[6]);
+    imgText.attr('src', prizeImgText[6]); // Assuming prizeImgText is an array containing paths to corresponding text images
+    $('.modal-overlay').fadeIn(500);
+}
+
+// Customized function to blink the last box for 3-5 seconds
+function blinkLastBox() {
+    const prizes = document.querySelectorAll('#my-lucky canvas');
+    const lastPrize = prizes[prizes.length - 1];
+
+    if (lastPrize) {
+        let isVisible = true;
+        const blinkInterval = setInterval(function() {
+            isVisible = !isVisible;
+            lastPrize.style.visibility = isVisible ? '' : 'hidden';
+        }, 200); // Blink every 200ms
+
+        // Stop blinking after 3-5 seconds
+        setTimeout(function() {
+            clearInterval(blinkInterval); // Stop blinking
+            lastPrize.style.visibility = ''; // Ensure the last box is visible
+            // Show the popup image (assuming the class name for the popup image is 'modal-overlay')
             $('.modal-overlay').fadeIn(500);
+        }, Math.floor(Math.random() * 3000) + 3000); // Random time between 3000ms and 5000ms
+    }
+}
 
-        }
-
-        $('.btn_click').on('click', function () {
-
-            switch (randomNumber) {
-                case 0://TeenpattiYes
-                $('.copy').attr('data-copy','https://ossmm02.ersfdokm.com/TeenpattiYes-apk/TeenpattiYes-131536-channel-68686868.apk');
-                window.open('https://ossmm02.ersfdokm.com/TeenpattiYes-apk/TeenpattiYes-131536-channel-68686868.apk');
-                    break;
-                case 1://RummyYes
-                $('.copy').attr('data-copy','https://ossmm02.ersfdokm.com/RummyYesIPA/RummyYes-132920-channel-68686868.apk');
-                window.open('https://ossmm02.ersfdokm.com/RummyYesIPA/RummyYes-132920-channel-68686868.apk');
-                    break;
-                case 2: //svip3pattiagAPK
-                $('.copy').attr('data-copy','https://ossyd01.ersfdokm.com/svip3pattiagAPK/india_SVIP3Patti_2-channel-68686868.apk');
-                window.open('https://ossyd01.ersfdokm.com/svip3pattiagAPK/india_SVIP3Patti_2-channel-68686868.apk');
-                    break;
-                case 3://teenpatti_vip
-                $('.copy').attr('data-copy','https://ossyd06.ersfdokm.com/teenpattivipAPK/teenpatti_vip-133813-channel-68686868.apk');
-                window.open('https://ossyd06.ersfdokm.com/teenpattivipAPK/teenpatti_vip-133813-channel-68686868.apk');
-                    break;
-                case 4://vip3patti
-                $('.copy').attr('data-copy','https://ossmm05.ersfdokm.com/vip3pattiAPK/vip3patti68686868.apk');
-                window.open('https://ossmm05.ersfdokm.com/vip3pattiAPK/vip3patti68686868.apk');
-                    break;
-                case 5://RummyTry
-                $('.copy').attr('data-copy','https://ossyd06.downwl.com/Rummytry/RummyTry-140026-channel-68686868.apk');
-                window.open('https://ossyd06.downwl.com/Rummytry/RummyTry-140026-channel-68686868.apk');
-                    break;
-                case 6://RummyVIP
-                $('.copy').attr('data-copy','https://ossyd06.ersfdokm.com/RummyVIPAPK/RummyVIP-134200-channel-68686868.apk');
-                window.open('https://ossyd06.ersfdokm.com/RummyVIPAPK/RummyVIP-134200-channel-68686868.apk');
-                    break;
-            }
-
-        });
-
-
-        $('.modal-close').on('click',function(){
-            randomNumber = Math.floor(Math.random() * 7);
-            $('.modal-overlay').fadeOut(500);
-        });
-
-
-        $('.copy').on('click', function () {
-            let downloadLink;
-            switch (randomNumber) {
-                case 0: //TeenpattiYes
-                    downloadLink = 'https://ossmm02.ersfdokm.com/TeenpattiYes-apk/TeenpattiYes-131536-channel-68686868.apk';
-                    break;
-                case 1: //RummyYes
-                    downloadLink = 'https://ossmm02.ersfdokm.com/RummyYesIPA/RummyYes-132920-channel-68686868.apk';
-                    break;
-                case 2: //svip3pattiagAPK
-                    downloadLink = 'https://ossyd01.ersfdokm.com/svip3pattiagAPK/india_SVIP3Patti_2-channel-68686868.apk';
-                    break;
-                case 3: //teenpatti_vip
-                    downloadLink = 'https://ossyd06.ersfdokm.com/teenpattivipAPK/teenpatti_vip-133813-channel-68686868.apk';
-                    break;
-                case 4: //vip3patti
-                    downloadLink = 'https://ossmm05.ersfdokm.com/vip3pattiAPK/vip3patti68686868.apk';
-                    break;
-                case 5: //RummyTry
-                    downloadLink = 'https://ossyd06.downwl.com/Rummytry/RummyTry-140026-channel-68686868.apk';
-                    break;
-                case 6: //RummyVIP
-                    downloadLink = 'https://ossyd06.ersfdokm.com/RummyVIPAPK/RummyVIP-134200-channel-68686868.apk';
-                    break;
-            }
-            let aux = document.createElement("input");
-            aux.setAttribute("value", downloadLink);
-            document.body.appendChild(aux);
-            aux.select();
-            document.execCommand("copy");
-            document.body.removeChild(aux);
-            alert('Download link copied successfully');
-        });
 
     </script>
 </body>
